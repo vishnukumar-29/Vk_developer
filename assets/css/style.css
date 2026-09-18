@@ -1,0 +1,231 @@
+/* Reset & basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+  max-width: 1152px !important;
+  margin: 0 auto;
+}
+
+
+.bg-dark {
+  background-color: #030712;
+}
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Root variables */
+:root {
+  /* Font sizes */
+  --font-xs: 11px;
+  --font-sm: 14px;
+  --font-lg: 28px;
+  --font-xxl: 50px;
+  --font-xxxl: 80px;
+
+  /* Colors */
+  --grey: #afafaf;
+  --pink: #c40a3b;
+  --light-grey: #e6e6e6;
+  --primary-grey: #d2d5db;
+  --light-white: #fafafa;
+  --primary-white: #374151;
+  --custom-blue: #111827;
+
+  /* Line heights */
+  --lh-100: 100%;
+  --lh-120: 120%;
+  --lh-160: 160%;
+}
+
+/* Font size classes */
+.fs-xs {
+  font-size: var(--font-xs);
+}
+
+.fs-sm {
+  font-size: var(--font-sm);
+}
+
+.fs-lg {
+  font-size: var(--font-lg);
+}
+
+.fs-xxl {
+  font-size: var(--font-xxl);
+}
+
+.fs-xxxl {
+  font-size: var(--font-xxxl);
+}
+
+/* Color classes */
+.text-grey {
+  color: var(--grey);
+}
+
+.text-light-grey {
+  color: var(--light-grey);
+}
+
+.text-pink {
+  color: var(--pink);
+}
+
+.bg-primary-white {
+  background-color: var(--primary-white);
+}
+
+.bg-pink {
+  background-color: var(--pink);
+}
+
+.combo-card:hover {
+  background-color: var(--pink);
+}
+
+.primary-grey {
+  color: var(--primary-grey);
+}
+
+.text-light-white {
+  color: var(--light-white);
+}
+
+.bg-custom-blue {
+  background-color: var(--custom-blue);
+}
+
+
+/* Line height classes */
+.lh-100 {
+  line-height: var(--lh-100);
+}
+
+.lh-120 {
+  line-height: var(--lh-120);
+}
+
+.lh-160 {
+  line-height: var(--lh-160);
+}
+
+/* Font families */
+.bricolage {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.shadow-light {
+  box-shadow: 0px 4px 25px 0px #01010114;
+
+}
+
+
+/* swiper */
+    .skillsSwiper {
+        overflow: visible;
+    }
+
+    .skill-card {
+        height: 125px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 14px;
+        padding: 15px;
+        cursor: pointer;
+        transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+    }
+
+    .skill-card img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        transition: transform 0.35s ease;
+    }
+
+    .skill-card span {
+        color: #d1d5db;
+        font-size: 14px;
+        white-space: nowrap;
+        transition: color 0.35s ease;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-6px);
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .skill-card:hover img {
+        transform: scale(1.08);
+    }
+
+    .skill-card:hover span {
+        color: #ffffff;
+    }
+
+    .skillsSwiper .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+@keyframes floating {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    20% {
+        transform: translate(8px, -6px) rotate(0.18deg);
+    }
+
+    40% {
+        transform: translate(-6px, -12px) rotate(-0.5deg);
+    }
+
+    60% {
+        transform: translate(-10px, 5px) rotate(-0.8deg);
+    }
+
+    80% {
+        transform: translate(6px, 10px) rotate(0.5deg);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+@keyframes imageGlow {
+    0%, 100% {
+        filter:
+            drop-shadow(0 10px 15px rgba(0, 0, 0, 0.18))
+            drop-shadow(0 0 10px rgba(255, 255, 255, 0.25));
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 15px 20px rgba(0, 0, 0, 0.22))
+            drop-shadow(0 0 28px rgba(255, 255, 255, 0.65));
+    }
+}
+
+.floating-img {
+    animation:
+        floating 7s ease-in-out infinite,
+        imageGlow 3s ease-in-out infinite;
+
+    will-change: transform, filter;
+}
