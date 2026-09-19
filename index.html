@@ -5,14 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PF</title>
+    <!--=================== Style css Link ======================-->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
 
+    <!--====================== Page Logo ========================-->
+    <link rel="icon" type="image/png" href="./assets/images/png/logo.png">
+
+    <!--======================= AOS CDN =========================-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--===================== Swiper CDN ========================-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--=================== Tailwind CSS CDN ====================-->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="">
-    <!-- Header -->
+    <!--========================= Header =========================-->
     <header class="bg-dark shadow-md py-2 md:py-4 relative z-[70]">
         <div class="container mx-auto px-4"> <!-- Top Navbar -->
             <div class="flex justify-between items-center relative z-[70]"> <!-- Logo --> <a href="#"> <img
@@ -62,7 +72,8 @@
                 </button>
             </div>
         </div>
-    </header> <!-- ========================= MOBILE FULL SCREEN MENU ========================= -->
+    </header>
+    <!-- =============== MOBILE FULL SCREEN MENU ================ -->
     <div id="mobileMenu"
         class="fixed inset-0 z-[65] bg-dark invisible opacity-0 transition-all duration-500 ease-in-out">
         <div class="h-screen w-full flex flex-col justify-center items-center px-6">
@@ -81,7 +92,8 @@
                     Download CV </a> </nav>
         </div>
     </div>
-    <!-- Hero -->
+
+    <!--========================== Hero ==========================-->
     <header class="bg-dark shadow-md py-8 md:py-12 relative z-50">
         <div class="container px-4 mx-auto pb-8 md:pb-14">
 
@@ -91,10 +103,9 @@
                 <div class="w-full lg:w-2/3">
 
                     <!-- Heading -->
-                    <h1
+                    <h1 id="hero-title"
                         class="text-light-white text-2xl md:text-4xl max-sm:mt-8 lg:text-5xl xl:text-6xl font-bold mb-4">
-                        Hi, I’m Vishnu Kumar
-                        <span class="inline-block animate-wave">👋</span>
+                        <span id="typing-text"></span><span id="wave-hand" class="inline-block">👋</span>
                     </h1>
 
                     <!-- Description -->
@@ -143,15 +154,16 @@
 
 
                         <!-- Instagram -->
-                        <a href="https://www.instagram.com/vishu_khicher/" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram" class="bg-white p-3 md:p-4 rounded-full transition-all duration-300 
-       hover:-translate-y-1 
-       hover:shadow-[0_0_15px_rgba(255,255,255,0.8),0_0_15px_rgba(255,255,255,0.5)]"> <svg
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5"
+                        <a href="https://wa.me/919992877529" target="_blank" rel="noopener noreferrer"
+                            aria-label="WhatsApp" class="bg-white p-3 md:p-4 rounded-full transition-all duration-300
+           hover:-translate-y-1
+           hover:shadow-[0_0_15px_rgba(255,255,255,0.8),0_0_15px_rgba(255,255,255,0.5)]">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5"
                                 fill="currentColor">
                                 <path
-                                    d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z" />
-                            </svg> </a>
+                                    d="M12.04 2C6.51 2 2 6.51 2 12.04c0 1.77.46 3.5 1.33 5.02L2 22l5.08-1.31a9.98 9.98 0 0 0 4.96 1.31h.01C17.57 22 22 17.49 22 12.04 22 6.51 17.57 2 12.04 2zm0 18.03h-.01a8.3 8.3 0 0 1-4.23-1.16l-.3-.18-3.02.78.81-2.94-.2-.3a8.32 8.32 0 1 1 6.95 3.8zm4.57-6.24c-.25-.13-1.47-.73-1.7-.81-.23-.08-.4-.13-.57.13-.17.25-.65.81-.8.98-.15.17-.3.19-.55.06-.25-.13-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.39.11-.52.12-.12.25-.3.38-.45.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.57-1.37-.78-1.88-.2-.49-.4-.42-.57-.43h-.49c-.17 0-.45.06-.68.32-.23.25-.89.87-.89 2.12s.91 2.46 1.04 2.63c.13.17 1.79 2.73 4.33 3.83.61.26 1.08.42 1.45.54.61.19 1.17.16 1.61.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.29z" />
+                            </svg>
+                        </a>
 
                     </div>
 
@@ -184,11 +196,12 @@
 
         </div>
     </header>
-    <!-- Skills -->
+
+    <!--========================= Skills ==========================-->
     <section id="skills" class="bg-dark pt-10 md:pt-14 xl:pt-24 overflow-hidden">
         <div class="container mx-auto px-4">
 
-            <div class="flex flex-col items-center justify-center ">
+            <div data-aos="zoom-in" class="flex flex-col items-center justify-center ">
                 <p class="text-light-white py-1 px-4 text-center bg-primary-white rounded-2xl mb-4 text-sm">
                     Skills
                 </p>
@@ -198,7 +211,7 @@
                 </h2>
             </div>
 
-            <div class="skills-swiper-wrapper overflow-hidden md:pt-4">
+            <div data-aos="zoom-in" class="skills-swiper-wrapper overflow-hidden md:pt-4">
                 <div class="swiper skillsSwiper">
                     <div class="swiper-wrapper my-10">
 
@@ -363,11 +376,12 @@
 
         </div>
     </section>
-    <!-- About -->
+
+    <!--========================== About ==========================-->
     <section id="about" class="bg-custom-blue py-10 md:py-14 xl:py-24 overflow-hidden">
         <div class="container mx-auto px-4">
 
-            <div class="flex flex-col items-center justify-center">
+            <div data-aos="zoom-in" class="flex flex-col items-center justify-center">
                 <p class="text-light-white py-1 px-4 text-center bg-primary-white rounded-2xl mb-4 text-sm">
                     About Me
                 </p>
@@ -375,7 +389,7 @@
 
             <div class="flex flex-row flex-wrap items-center justify-center md:mt-10">
 
-                <div class="w-full lg:w-1/2 max-md:pt-8 flex justify-center">
+                <div data-aos="zoom-in" class="w-full lg:w-1/2 max-md:pt-8 flex justify-center">
                     <img src="./assets/images/png/men.png" alt="Vishnu Kumar"
                         class="w-full lg:w-[70%] shadow-2xl rounded-2xl max-w-md object-contain floating-img">
                 </div>
@@ -383,7 +397,7 @@
                 <div class="w-full lg:w-1/2 max-lg:mt-8">
                     <div class="lg:max-w-2xl">
 
-                        <p class="text-light-white text-base md:text-lg leading-relaxed mb-5">
+                        <p data-aos="zoom-in" class="text-light-white text-base md:text-lg leading-relaxed mb-5">
                             I'm Vishnu Kumar, a passionate Frontend Developer with hands-on
                             experience building responsive, scalable, and user-friendly web
                             applications. I enjoy transforming ideas and designs into
@@ -391,7 +405,7 @@
                             tablet, and mobile devices.
                         </p>
 
-                        <p class="text-light-white text-base md:text-lg leading-relaxed mb-5">
+                        <p data-aos="zoom-in" class="text-light-white text-base md:text-lg leading-relaxed mb-5">
                             I specialize in developing frontend interfaces using React.js,
                             Vue.js, JavaScript, TypeScript, Next.js, Tailwind CSS, Bootstrap,
                             HTML, and CSS. I focus on writing clean, reusable, and
@@ -399,7 +413,7 @@
                             consistent and engaging user experience.
                         </p>
 
-                        <p class="text-light-white text-base md:text-lg leading-relaxed mb-5">
+                        <p data-aos="zoom-in" class="text-light-white text-base md:text-lg leading-relaxed mb-5">
                             Throughout my professional experience, I have worked on live
                             client projects including e-commerce websites, business
                             websites, and dashboard applications. My work includes
@@ -408,7 +422,7 @@
                             user interfaces.
                         </p>
 
-                        <p class="text-light-white text-base md:text-lg leading-relaxed">
+                        <p data-aos="zoom-in" class="text-light-white text-base md:text-lg leading-relaxed">
                             I am always interested in learning new technologies, improving
                             my development skills, and finding better ways to solve
                             frontend challenges. My goal is to build high-quality web
@@ -423,17 +437,124 @@
         </div>
     </section>
 
+    <!--======================= Achievements ======================-->
+    <section id="achievements" class="py-16 bg-dark md:py-20">
+        <div class="container mx-auto px-4">
 
 
-    <!-- Experience Section -->
+            <!-- Section Heading -->
+            <div class="flex flex-col items-center justify-center mb-8 md:mb-12">
+                <p data-aos="zoom-in"
+                    class="text-light-white py-1 px-4 text-center bg-primary-white rounded-2xl mb-4 text-sm">
+                    My Achievements
+                </p>
 
+                <h2 data-aos="zoom-in"
+                    class="text-white text-lg sm:text-xl md:text-3xl lg:text-4xl font-semibold text-center">
+                    Building Digital Experiences
+                </h2>
+            </div>
+            <!-- Stats -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+
+                <!-- Stat 1 -->
+                <div class="group relative overflow-hidden rounded-2xl border border-white/10 
+        bg-white/[0.03] p-6 md:p-8 text-center
+        transition-all duration-300
+           hover:-translate-y-1
+           hover:shadow-[0_0_15px_rgba(55,55,55,0.8),0_0_25px_rgba(55,55,55,0.5)] duration-500
+        hover:bg-white/[0.06]" data-aos="fade-up">
+                    <div class="absolute -right-10 -top-10 h-24 w-24 rounded-full
+          bg-primary/10 blur-2xl transition-all duration-500
+          group-hover:bg-primary/30"></div>
+
+                    <!-- Stat 1 -->
+                    <h3 class="relative text-3xl md:text-4xl lg:text-5xl font-bold text-light-white">
+                        <span class="counter" data-target="80">0</span><span class="text-primary">+</span>
+                    </h3>
+
+                    <p class="relative mt-3 text-sm md:text-base text-light-grey">
+                        Live Projects
+                    </p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="group relative overflow-hidden rounded-2xl border border-white/10 
+        bg-white/[0.03] p-6 md:p-8 text-center
+        transition-all duration-300
+           hover:-translate-y-1
+           hover:shadow-[0_0_15px_rgba(55,55,55,0.8),0_0_25px_rgba(55,55,55,0.5)] duration-500
+        hover:bg-white/[0.06]" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -right-10 -top-10 h-24 w-24 rounded-full
+          bg-primary/10 blur-2xl transition-all duration-500
+          group-hover:bg-primary/30"></div>
+
+                    <!-- Stat 2 -->
+                    <h3 class="relative text-3xl md:text-4xl lg:text-5xl font-bold text-light-white">
+                        <span class="counter" data-target="55">0</span><span class="text-primary">+</span>
+                    </h3>
+
+                    <p class="relative mt-3 text-sm md:text-base text-light-grey">
+                        Happy Clients
+                    </p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="group relative overflow-hidden rounded-2xl border border-white/10 
+        bg-white/[0.03] p-6 md:p-8 text-center
+        transition-all duration-300
+           hover:-translate-y-1
+           hover:shadow-[0_0_15px_rgba(55,55,55,0.8),0_0_25px_rgba(55,55,55,0.5)] duration-500
+        hover:bg-white/[0.06]" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -right-10 -top-10 h-24 w-24 rounded-full
+          bg-primary/10 blur-2xl transition-all duration-500
+          group-hover:bg-primary/30"></div>
+
+                    <!-- Stat 3 -->
+                    <h3 class="relative text-3xl md:text-4xl lg:text-5xl font-bold text-light-white">
+                        <span class="counter" data-target="2">0</span><span class="text-primary">+</span>
+                    </h3>
+
+                    <p class="relative mt-3 text-sm md:text-base text-light-grey">
+                        Years Experience
+                    </p>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="group relative overflow-hidden rounded-2xl border border-white/10 
+        bg-white/[0.03] p-6 md:p-8 text-center
+        transition-all duration-300
+           hover:-translate-y-1
+           hover:shadow-[0_0_15px_rgba(55,55,55,0.8),0_0_25px_rgba(55,55,55,0.5)] duration-500
+        hover:bg-white/[0.06]" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute -right-10 -top-10 h-24 w-24 rounded-full
+          bg-primary/10 blur-2xl transition-all duration-500
+          group-hover:bg-primary/30"></div>
+
+                    <!-- Stat 4 -->
+                    <h3 class="relative text-3xl md:text-4xl lg:text-5xl font-bold text-light-white">
+                        <span class="counter" data-target="10">0</span><span class="text-primary">+</span>
+                    </h3>
+
+                    <p class="relative mt-3 text-sm md:text-base text-light-grey">
+                        Technologies
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--====================== Experience =========================-->
     <section id="experience" class="bg-custom-blue py-10 md:py-14 xl:py-24 ">
         <div class="container px-4">
             <div class="flex flex-col items-center justify-center">
-                <p class="text-light-white py-1 px-4 text-center bg-primary-white rounded-2xl mb-4 text-sm">
+                <p data-aos="zoom-in"
+                    class="text-light-white py-1 px-4 text-center bg-primary-white rounded-2xl mb-4 text-sm">
                     Experience
                 </p>
-                <h2 class="text-white text-lg sm:text-xl mb-10 md:text-2xl lg:text-3xl font-semibold text-center">
+                <h2 data-aos="zoom-in"
+                    class="text-white text-lg sm:text-xl mb-10 md:text-2xl lg:text-3xl font-semibold text-center">
                     Here is a
                     quick
                     summary of my most recent experiences:</h2>
@@ -445,7 +566,7 @@
                 <!-- Jadon Webtech -->
                 <div
                     class="bg-slate-800 rounded-xl p-4 sm:p-6 md:p-8 shadow-md hover:shadow-[0_10px_40px_rgba(255,255,255,0.08)] hover:-translate-y-1 transition-all duration-300">
-                    <div class="grid grid-cols-1 md:grid-cols-[160px_1fr_150px] gap-6">
+                    <div data-aos="zoom-in" class="grid grid-cols-1 md:grid-cols-[160px_1fr_150px] gap-6">
 
                         <div class="flex items-start">
                             <a href="https://www.jadontech.com/" target="_blank" rel="noopener noreferrer"
@@ -501,7 +622,7 @@
 
 
                 <!-- Radial Code -->
-                <div
+                <div data-aos="zoom-in"
                     class="bg-slate-800 rounded-xl p-4 sm:p-6 md:p-8 shadow-md hover:shadow-[0_10px_40px_rgba(255,255,255,0.08)] hover:-translate-y-1 transition-all duration-300">
                     <div class="grid grid-cols-1 md:grid-cols-[160px_1fr_150px] gap-6">
 
@@ -559,17 +680,20 @@
             </div>
         </div>
     </section>
-    <!-- Projects Section -->
+
+    <!--======================= Projects ==========================-->
     <section id="work" class="bg-dark py-10 md:py-14 xl:py-24">
         <div class="container mx-auto px-4 max-md:mt-8">
 
             <!-- Section Heading -->
             <div class="flex flex-col items-center justify-center mb-8 md:mb-12">
-                <p class="text-light-white py-1 px-4 text-center bg-primary-white rounded-2xl mb-4 text-sm">
-                    Project's
+                <p data-aos="zoom-in"
+                    class="text-light-white py-1 px-4 text-center bg-primary-white rounded-2xl mb-4 text-sm">
+                    Company Project's
                 </p>
 
-                <h2 class="text-white text-lg sm:text-xl md:text-3xl lg:text-4xl font-semibold text-center">
+                <h2 data-aos="zoom-in"
+                    class="text-white text-lg sm:text-xl md:text-3xl lg:text-4xl font-semibold text-center">
                     Some Things I've Built
                     <span class="text-light-grey text-sm sm:text-base md:text-lg font-normal">
                         — Radial Code
@@ -579,7 +703,8 @@
 
 
             <!-- Project Card -->
-            <div class="max-w-[1100px] mx-auto bg-[#1f2a3a] rounded-xl overflow-hidden shadow-lg border border-white/5">
+            <div data-aos="zoom-in"
+                class="max-w-[1100px] mx-auto bg-[#1f2a3a] rounded-xl overflow-hidden shadow-lg border border-white/5">
 
                 <div class="grid grid-cols-1 md:grid-cols-2">
 
@@ -612,9 +737,9 @@
                         </p>
 
                         <a href="https://zoplenti-1.vercel.app/" target="_blank"
-                            class="inline-block flex items-center gap-x-2  self-start text-blue font-semibold px-5 py-1 rounded-full bg-white">
+                            class="inline-block flex items-center gap-x-2  self-start text-blue font-medium md:font-semibold px-3 md:px-5 text-sm md:text-base py-1 rounded-full bg-white">
                             View Project <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                                    stroke-width="2" stroke="currentColor" class="w-4 md:w-5 h-4 md:h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10" />
                                 </svg></span>
                         </a>
@@ -627,7 +752,7 @@
                 </div>
             </div>
             <!-- Project Card-2 -->
-            <div
+            <div data-aos="zoom-in"
                 class="max-w-[1100px] mt-8 mx-auto bg-[#1f2a3a] rounded-xl overflow-hidden shadow-lg border border-white/5">
 
                 <div class="flex flex-col-reverse md:grid md:grid-cols-2">
@@ -652,9 +777,9 @@
                         </p>
 
                         <a href="https://nomino-ai-three.vercel.app/" target="_blank"
-                            class="inline-block self-start flex items-center gap-x-2  text-blue font-semibold px-5 py-1 rounded-full bg-white">
+                            class="inline-block self-start flex items-center gap-x-2  text-blue font-medium md:font-semibold px-3 md:px-5 text-sm md:text-base py-1 rounded-full bg-white">
                             View Project <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                                    stroke-width="2" stroke="currentColor" class="w-4 md:w-5 h-4 md:h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10" />
                                 </svg></span>
                         </a>
@@ -675,7 +800,7 @@
                 </div>
             </div>
             <!-- Project Card 3-->
-            <div
+            <div data-aos="zoom-in"
                 class="max-w-[1100px] mt-8 mx-auto bg-[#1f2a3a] rounded-xl overflow-hidden shadow-lg border border-white/5">
 
                 <div class="grid grid-cols-1 md:grid-cols-2">
@@ -707,9 +832,9 @@
                         </p>
 
                         <a href="https://stonk-skins-tsx.vercel.app/" target="_blank"
-                            class="inline-block self-start flex items-center gap-x-2  text-blue font-semibold px-5 py-1 rounded-full bg-white">
+                            class="inline-block self-start flex items-center gap-x-2  text-blue font-medium md:font-semibold px-3 md:px-5 text-sm md:text-base py-1 rounded-full bg-white">
                             View Project <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                                    stroke-width="2" stroke="currentColor" class="w-4 md:w-5 h-4 md:h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10" />
                                 </svg></span>
                         </a>
@@ -722,7 +847,7 @@
                 </div>
             </div>
             <!-- Project Card-4 -->
-            <div
+            <div data-aos="zoom-in"
                 class="max-w-[1100px] mt-8 mx-auto bg-[#1f2a3a] rounded-xl overflow-hidden shadow-lg border border-white/5">
 
                 <div class="flex flex-col-reverse md:grid md:grid-cols-2">
@@ -747,9 +872,9 @@
                         </p>
 
                         <a href="https://new-invest-ai.vercel.app/" target="_blank"
-                            class="inline-block self-start text-blue flex items-center gap-x-2  font-semibold px-5 py-1 rounded-full bg-white">
+                            class="inline-block self-start text-blue flex items-center gap-x-2 font-medium md:font-semibold px-3 md:px-5 text-sm md:text-base py-1 rounded-full bg-white">
                             View Project <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                                    stroke-width="2" stroke="currentColor" class="w-4 md:w-5 h-4 md:h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10" />
                                 </svg></span>
                         </a>
@@ -770,12 +895,19 @@
                 </div>
             </div>
             <!-- Project Card-5 -->
-            <div
+            <div data-aos="zoom-in"
                 class="max-w-[1100px] mt-8 mx-auto bg-[#1f2a3a] rounded-xl overflow-hidden shadow-lg border border-white/5">
 
-                <div class="flex flex-col-reverse md:grid md:grid-cols-2">
+                <div class="grid grid-cols-1 md:grid-cols-2">
 
-
+                    <!-- Project Image -->
+                    <div class="bg-[#344154] p-3 sm:p-5 md:p-7 lg:p-8 flex items-center justify-center">
+                        <a href="https://shivisionlifescience.com/" target="_blank"
+                            class="block w-full overflow-hidden rounded-lg shadow-md">
+                            <img src="./assets/images/png/shivvision.png" alt="ShivVision-LifeScience Project"
+                                class="w-full h-auto object-cover transition-transform duration-500 hover:scale-[1.02]" />
+                        </a>
+                    </div>
                     <!-- Project Content -->
                     <div class="p-4 sm:p-6 md:p-8 lg:p-10 flex flex-col justify-center">
 
@@ -783,7 +915,6 @@
                         <h3 class="text-white text-xl md:text-2xl font-semibold mb-3 sm:mb-5">
                             ShivVision-LifeScience
                         </h3>
-
 
                         <!-- Description -->
                         <p class="text-light-grey text-sm md:text-base leading-relaxed mb-6 max-w-[600px]">
@@ -795,9 +926,9 @@
                         </p>
 
                         <a href="https://shivisionlifescience.com/" target="_blank"
-                            class="inline-block self-start text-blue flex items-center gap-x-2  font-semibold px-5 py-1 rounded-full bg-white">
+                            class="inline-block self-start text-blue flex items-center gap-x-2 font-medium md:font-semibold px-3 md:px-5 text-sm md:text-base py-1 rounded-full bg-white">
                             View Project <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                                    stroke-width="2" stroke="currentColor" class="w-4 md:w-5 h-4 md:h-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10" />
                                 </svg></span>
                         </a>
@@ -806,28 +937,23 @@
 
 
                     </div>
-                    <!-- Project Image -->
-                    <div class="bg-[#344154] p-3 sm:p-5 md:p-7 lg:p-8 flex items-center justify-center">
-                        <a href="https://shivisionlifescience.com/" target="_blank"
-                            class="block w-full overflow-hidden rounded-lg shadow-md">
-                            <img src="./assets/images/png/shivvision.png" alt="ShivVision-LifeScience Project"
-                                class="w-full h-auto object-cover transition-transform duration-500 hover:scale-[1.02]" />
-                        </a>
-                    </div>
+
 
                 </div>
             </div>
 
         </div>
     </section>
-    <!-- Get in Touch Section -->
-    <section id="contact" class="bg-dark py-10 md:py-14 xl:py-24 ">
+
+    <!--====================== Get in Touch =======================-->
+    <section id="contact" class="bg-custom-blue py-10 md:py-14 xl:py-24">
         <div class="container px-4">
-            <div class="flex flex-col items-center justify-center">
+            <div data-aos="zoom-in" class="flex flex-col items-center justify-center">
                 <p class="text-light-white py-1 px-4 text-center bg-primary-white rounded-2xl mb-4 text-sm">
                     Get in Touch
                 </p>
-                <p class="text-light-white text-center max-w-xl mb-8 md:mb-12 text-lg md:text-xl">What’s
+                <p class="text-light-white text-center max-w-xl mb-8 md:mb-12 text-lg md:text-xl">
+                    What’s
                     next? Feel free
                     to reach out to me
                     if you're looking for a developer, have a query, or simply want to connect.</p>
@@ -859,114 +985,25 @@
             </div>
         </div>
     </section>
-
-
-
-
-    <script>
-        const menuButton = document.getElementById("menuButton");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const hamburger = document.getElementById("hamburger");
-        const cross = document.getElementById("cross");
-        const mobileLinks = document.querySelectorAll(".mobile-link");
-
-        let menuOpen = false;
-
-        menuButton.addEventListener("click", () => {
-            menuOpen = !menuOpen;
-
-            if (menuOpen) {
-                mobileMenu.classList.remove("invisible", "opacity-0");
-                mobileMenu.classList.add("visible", "opacity-100");
-
-                hamburger.classList.add("opacity-0", "rotate-90");
-
-                cross.classList.remove("opacity-0", "rotate-90");
-                cross.classList.add("opacity-100", "rotate-0");
-
-                mobileLinks.forEach((link) => {
-                    link.classList.remove("opacity-0", "translate-y-5");
-                    link.classList.add("opacity-100", "translate-y-0");
-                });
-
-                document.body.classList.add("overflow-hidden");
-            } else {
-                closeMenu();
-            }
-        });
-
-        function closeMenu() {
-            menuOpen = false;
-
-            mobileMenu.classList.add("invisible", "opacity-0");
-            mobileMenu.classList.remove("visible", "opacity-100");
-
-            hamburger.classList.remove("opacity-0", "rotate-90");
-
-            cross.classList.add("opacity-0", "rotate-90");
-            cross.classList.remove("opacity-100", "rotate-0");
-
-            mobileLinks.forEach((link) => {
-                link.classList.add("opacity-0", "translate-y-5");
-                link.classList.remove("opacity-100", "translate-y-0");
-            });
-
-            document.body.classList.remove("overflow-hidden");
-        }
-
-        mobileLinks.forEach((link) => {
-            link.addEventListener("click", closeMenu);
-        });
-
-        window.addEventListener("resize", () => {
-            if (window.innerWidth >= 768) {
-                closeMenu();
-            }
-        });
-    </script>
+    <!--======================= Swiper CDN ========================-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <!--=================== Style Js Link ======================-->
+    <script src="./assets/js/app.js"></script>
+      <!--======================== AOS CDN ==========================-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        const skillsSwiper = new Swiper(".skillsSwiper", {
-            slidesPerView: "auto",
-            spaceBetween: 35,
-            loop: true,
-            speed: 3500,
-
-            autoplay: {
-                delay: 0,
-                disableOnInteraction: false
-            },
-
-            allowTouchMove: true,
-
-            breakpoints: {
-                0: {
-                    spaceBetween: 15
-                },
-                640: {
-                    spaceBetween: 25
-                },
-                768: {
-                    spaceBetween: 35
-                },
-                1024: {
-                    spaceBetween: 45
-                }
-            }
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100,
+            delay: 0
         });
 
-        const skillsWrapper = document.querySelector(".skills-swiper-wrapper");
-
-        skillsWrapper.addEventListener("mouseenter", () => {
-            skillsSwiper.autoplay.stop();
-        });
-
-        skillsWrapper.addEventListener("mouseleave", () => {
-            skillsSwiper.autoplay.start();
-        });
     </script>
+    
 
+  
 </body>
 
 </html>
